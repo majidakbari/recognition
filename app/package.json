@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "dev": "nodemon src/public/app.ts",
-    "transpile": "tsc -p config",
-    "test": "jest --config ./jest.config.ts --runInBand --detectOpenHandles"
+    "transpile": "tsc -p ./config",
+    "test": "jest --config ./config/jest.config.ts --runInBand --detectOpenHandles"
   },
   "keywords": [
     "typescript",
