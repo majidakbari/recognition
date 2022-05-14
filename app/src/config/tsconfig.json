@@ -73,7 +73,6 @@
     "./../**/*.ts"
   ],
   "exclude": [
-    "../**/*.test.ts",
-    "./jest.config.ts"
+    "./../**/*.test.ts"
   ]
 }
