@@ -1,7 +1,7 @@
 {
   "name": "veriff",
   "version": "1.0.0",
-  "description": "A simple microservice acting as a gateway to gather some scattered resources",
+  "description": "A simple microservice acting as a gateway to gather some scattered resources.",
   "main": "app.js",
   "scripts": {
     "transpile": "tsc -p ./config",

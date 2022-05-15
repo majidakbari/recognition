@@ -33,6 +33,6 @@ const call = async (uri: string, method: Method) => {
         }
         throw new ServiceUnavailableError();
     }
-}
+};
 
 export {getSessionDetails, getSessionMedia, getMediaContext};
