@@ -5,6 +5,9 @@
 This application is a standalone _task based_ microservice providing REST HTTP endpoints.
 
 ## Challenge to be tackled
+Session details are provided by three different web APIs; The goal is to call those different endpoints (preferred to be called in parallel),
+gather their response, combine and return to the client as a single endpoint. The endpoint will return error even if one of the
+target services returns error.
 
 ## Features Overview
 
