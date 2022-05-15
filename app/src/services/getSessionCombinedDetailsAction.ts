@@ -1,4 +1,5 @@
-const getSessionCombinedDetailsAction = (sessionId: string) => {
+const getSessionCombinedDetailsAction = async (sessionId: string) => {
+    
     return {};
 };
 
