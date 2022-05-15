@@ -69,7 +69,7 @@ node:18
 
 ## Further suggestions
 
-* Add more tests and increase the code coverage.
+* To add more tests and increase the code coverage.
 * Using code quality tools like [Sonar](https://www.sonarqube.org/) to avoid having code smells and other development
   issues.
 * To add a logging tool.
