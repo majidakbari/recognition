@@ -22,7 +22,7 @@ const call = async (uri: string, method: Method) => {
         const baseUrl = process.env.VERIFF_BASE_URL || "https://api.veriff.internal";
         const response = await axios.request({
             method: method,
-            url: `${baseUrl}/uri`
+            url: `${baseUrl}/${uri}`
         });
         return response.data;
     } catch (err) {
