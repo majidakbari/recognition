@@ -1,9 +1,9 @@
 import {RequestHandler} from "express";
-import getSessionCombinedDetailsAction from "../../services/getSessionCombinedDetailsAction";
+import getSessionCombinedDetailsService from "../../services/getSessionCombinedDetailsService";
 
 const getSessionInfoController: RequestHandler = async (req, res) => {
     const sessionId = req.params.sessionId as string;
-    return res.send(await getSessionCombinedDetailsAction(sessionId));
+    return res.send(await getSessionCombinedDetailsService(sessionId));
 };
 
 export default getSessionInfoController;
