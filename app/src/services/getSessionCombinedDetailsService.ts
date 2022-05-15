@@ -1,4 +1,4 @@
-import {getMediaContext, getSessionDetails, getSessionMedia} from "../integrations/verifHttpClient";
+import {getMediaContext, getSessionDetails, getSessionMedia} from "../integrations/veriffHttpClient";
 import Session from "../interfaces/session";
 import Media from "../interfaces/media";
 import MediaContext from "../interfaces/mediaContext";
