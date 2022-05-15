@@ -1,0 +1,21 @@
+{
+  "restartable": "rs",
+  "ignore": [
+    "../node_modules/",
+    "../dist/",
+    "../config",
+    "../src/coverage/",
+    "../src/__tests__"
+  ],
+  "watch": [
+    "../src/"
+  ],
+  "execMap": {
+    "ts": "node -r ts-node/register"
+  },
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "js,json,ts",
+  "exec": "ts-node --project ./config/tsconfig.json ./src/public/app.ts"
+}

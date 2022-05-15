@@ -5,6 +5,7 @@ import corsHandler from "../middlewares/corsHandler";
 import errorHandler from "../middlewares/errorHandler";
 import routeHandler from "../middlewares/routeHandler";
 import acceptableHandler from "../middlewares/acceptableHandler";
+import "../integrations/externalService"
 
 const createServer = () => {
     const app = express();
