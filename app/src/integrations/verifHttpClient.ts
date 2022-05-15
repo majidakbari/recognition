@@ -1,16 +1,19 @@
 import axios, {AxiosError, Method} from "axios";
 import ServiceUnavailableError from "../errors/serverErrors/serviceUnavailableError";
 import ModelNotFoundError from "../errors/clinetErrors/modelNotFoundError";
+import Session from "../interfaces/session";
+import Media from "../interfaces/media";
+import MediaContext from "../interfaces/mediaContext";
 
-const getSessionDetails = async (sessionId: string) => {
+const getSessionDetails = async (sessionId: string): Promise<Session> => {
     return await call(`sessions/${sessionId}`, "get");
 };
 
-const getSessionMedia = async (sessionId: string) => {
+const getSessionMedia = async (sessionId: string): Promise<Media[]> => {
     return await call(`sessions/${sessionId}/media`, "get");
 };
 
-const getMediaContext = async (sessionId: string) => {
+const getMediaContext = async (sessionId: string): Promise<MediaContext> => {
     return await call(`media-context/${sessionId}`, "get");
 };
 
