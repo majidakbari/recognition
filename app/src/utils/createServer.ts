@@ -1,6 +1,6 @@
 import helmet from "helmet";
 import express from "express";
-// import appRouter from "../routes/index";
+import appRouter from "../http/routes/index";
 import corsHandler from "../middlewares/corsHandler";
 import errorHandler from "../middlewares/errorHandler";
 import routeHandler from "../middlewares/routeHandler";
@@ -11,7 +11,7 @@ const createServer = () => {
     app.use(helmet());
     app.use(corsHandler);
     app.use(acceptableHandler);
-    // app.use(appRouter);
+    app.use(appRouter);
     app.use(routeHandler);
     app.use(errorHandler);
     return app;
