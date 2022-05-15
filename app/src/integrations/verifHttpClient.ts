@@ -13,7 +13,7 @@ const getSessionMedia = async (sessionId: string): Promise<Media[]> => {
     return await call(`sessions/${sessionId}/media`, "get");
 };
 
-const getMediaContext = async (sessionId: string): Promise<MediaContext> => {
+const getMediaContext = async (sessionId: string): Promise<MediaContext[]> => {
     return await call(`media-context/${sessionId}`, "get");
 };
 

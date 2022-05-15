@@ -1,7 +1,7 @@
 interface Media {
     id: string,
     mimeType: string,
-    context: string
+    context: "document-front" | "document-back"
 }
 
 export default Media;

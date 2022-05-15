@@ -1,7 +1,7 @@
 interface MediaContext {
     id: string,
     mediaId: string,
-    context: string,
+    context: "back" | "front" | "none",
     probability: number
 }
 
