@@ -4,9 +4,10 @@
   "description": "A simple microservice acting as a gateway to gather some scattered resources",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon src/public/app.ts",
     "transpile": "tsc -p ./config",
-    "test": "jest --config ./config/jest.config.ts --runInBand --detectOpenHandles"
+    "dev": "nodemon src/public/app.ts",
+    "test": "jest --config ./config/jest.config.ts --runInBand --detectOpenHandles",
+    "start": "npx pm2 start config/pm2.yaml --no-daemon"
   },
   "keywords": [
     "typescript",
