@@ -22,8 +22,7 @@ Follow these steps to simply run the project.
 
 ### Clone the project
 
-Clone this repository into your local machine using the following command;
-Please note that it's a private repository, you may ask for proper permissions to be able to visit the page.
+Clone this repository into your local machine using the following command:
 ```bash
 git clone git@github.com:majidakbari/recognition.git
 ```
