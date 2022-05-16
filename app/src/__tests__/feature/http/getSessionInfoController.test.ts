@@ -1,20 +1,9 @@
 // @ts-ignore
 import request from "supertest"
-import {Express} from "express-serve-static-core"
 import createServer from "../../../utils/createServer"
-import * as httpClient from "../../../integrations/veriffHttpClient";
-import ModelNotFoundError from "../../../errors/clinetErrors/modelNotFoundError";
-import ServiceUnavailableError from "../../../errors/serverErrors/serviceUnavailableError";
 import Session from "../../../interfaces/session";
 import Media from "../../../interfaces/media";
 import MediaContext from "../../../interfaces/mediaContext";
-import {getSessionDetails} from "../../../integrations/veriffHttpClient";
-
-// let server: Express
-
-// beforeAll(() => {
-//     server = createServer();
-// });
 
 const session = {
     id: "90d61876-b99a-443e-994c-ba882c8558b6",
@@ -89,65 +78,9 @@ jest.mock("../../../integrations/veriffHttpClient", () => ({
     getMediaContext: () => Promise.resolve(mediaContext as MediaContext[])
 }));
 
-// mock1.mockImplementation(async (_: string) => );
-// mock2.mockImplementation(async (_: string) => );
-// mock3.mockImplementation(async (_: string) =>
-
 
 describe("show session details endpoint should act as expected.", () => {
-    // it("should return 404 when session id does not exist.", done => {
-    //     const mock = jest.spyOn(httpClient, 'getSessionDetails');
-    //     mock.mockImplementation(async (_: string) => {
-    //         throw new ModelNotFoundError();
-    //     });
-    //
-    //     request(server)
-    //         .get("/api/session/1")
-    //         .expect("Content-Type", /json/)
-    //         .expect(404)
-    //         .end((err, res) => {
-    //             if (err) return done(err)
-    //             expect(res.body).toMatchObject({
-    //                 error: "Client Error",
-    //                 message: "Model not found."
-    //             })
-    //             done()
-    //         })
-    //
-    //     mock.mockRestore();
-    // })
-    //
-    // it("should return 503 whenever at least one of third party APIs is unavailable.", done => {
-    //     const mock = jest.spyOn(httpClient, 'getSessionDetails');
-    //     mock.mockImplementation(async (_: string) => {
-    //         throw new ServiceUnavailableError();
-    //     });
-    //
-    //     request(server)
-    //         .get("/api/session/1")
-    //         .expect("Content-Type", /json/)
-    //         .expect(503)
-    //         .end((err, res) => {
-    //             if (err) return done(err)
-    //             expect(res.body).toMatchObject({
-    //                 error: "Server Error",
-    //                 message: "Service unavailable."
-    //             })
-    //             done()
-    //         })
-    //     mock.mockRestore();
-    // })
-
     it("should return 200 with correct response structure.", done => {
-
-
-        // const mock1 = jest.spyOn(httpClient, 'getSessionDetails');
-        // const mock2 = jest.spyOn(httpClient, 'getSessionMedia');
-        // const mock3 = jest.spyOn(httpClient, 'getMediaContext');
-        // mock1.mockImplementation(async (_: string) => Promise.resolve(session as Session));
-        // mock2.mockImplementation(async (_: string) => Promise.resolve(sessionMedia as Media[]));
-        // mock3.mockImplementation(async (_: string) => Promise.resolve(mediaContext as MediaContext[]));
-
         request(createServer())
             .get("/api/session/1")
             .expect("Content-Type", /json/)
@@ -187,8 +120,5 @@ describe("show session details endpoint should act as expected.", () => {
                 })
                 done()
             })
-        // mock1.mockRestore();
-        // mock2.mockRestore();
-        // mock3.mockRestore();
     })
 })
